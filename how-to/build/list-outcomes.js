@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 
-module.exports = function listOutcomes(dirName = './outcomes') {
+module.exports = function listOutcomes(dirName = './how-to/outcomes') {
   const outcomes = fs.readdirSync(dirName)
     .filter(file => fs.statSync(path.join(dirName, file)).isDirectory())
     .map(subDir => {
