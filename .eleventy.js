@@ -21,6 +21,9 @@ module.exports = function(eleventyConfig) {
   // Copy `js/` to `_site/js`
   eleventyConfig.addPassthroughCopy("js");
 
+  // Copy `acknowledgements/` to `_site/acknowledgements`
+  eleventyConfig.addPassthroughCopy("acknowledgements"); 
+
   const dir = {
     input: "./",
     output : "_site",
