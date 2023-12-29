@@ -99,7 +99,7 @@ permalink: /
 			<p>As more content is developed, this section will be a list of guidelines with a unique short name, and the text of the requirement written in plain language. The list is currently in alphabetical order, but we do not expect that to persist. </p>
 			</div>
 
-			{% for item in collections.outcome %}
+			{% for item in collections.guideline %}
 			<section class="guideline" data-status="placeholder">
 				<h3>{{ item.data.title }}</h3>
 				<p class="guideline-text">{{ item.data.description | safe }}</p>

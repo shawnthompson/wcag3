@@ -1,5 +1,5 @@
 ---
 title: Flexible views
 description: Views are flexible
-tags: outcome
+tags: guideline
 ---
