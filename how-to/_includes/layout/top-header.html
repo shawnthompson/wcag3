@@ -12,7 +12,9 @@
     </div>
   </header>
 
-  {%- if outcome.slug %}
+{# Was breaking build need to fix
+
+{%- if outcome.slug %}
   <nav aria-label="WCAG 3 How-to Navigation"><div class="page-width nav-list">
     {%- assign base = '/' | append: outcome.slug %}
     <ul>
@@ -25,4 +27,7 @@
     </ul>
   </div></nav>
   {%- endif %}
+  
+#}
+
 </div>

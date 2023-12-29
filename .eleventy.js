@@ -15,15 +15,22 @@ module.exports = function(eleventyConfig) {
   // Make it easy to deploy to gh-pages
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 
-  // Copy `assets/` to `_site/assets`
-  eleventyConfig.addPassthroughCopy({"guidelines" : "/"});
+  // Copy `assets/` to `_site/js`
   eleventyConfig.addPassthroughCopy({"./how-to/assets" : "/assets"});
+
+  // Copy `js/` to `_site/js`
+  eleventyConfig.addPassthroughCopy("js");
 
   const dir = {
     input: "./",
     output : "_site",
     includes: "./how-to/_includes" // relative to dir.input
   }
-
-  return { dir }
+  
+  return { 
+		dir,
+		templateFormats : ["html", "md", "njk", "css"],
+		htmlTemplateEngine : "njk",
+		markdownTemplate : "njk"
+	}
 };
